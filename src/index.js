@@ -29,6 +29,7 @@ const renderMenu = ramens => {
 
             bigImg.src = ramen.image
             container.append(bigImg, name, restaurant)
+            return menuDiv
 
         })
     })
@@ -39,19 +40,19 @@ const ramenForm = () => {
     form.addEventListener('submit', e => {
         e.preventDefault()
         
-        const newContainer = document.createElement('div')
-        const newName = document.createElement('h2')
-        const newRest = document.createElement('h3')
-        const newImage = document.createElement('img')
-        const newRating = document.createElement('span')
-        const newComment = document.createElement('p')
+        // const newContainer = document.createElement('div')
+        // const newName = document.createElement('h2')
+        // const newRest = document.createElement('h3')
+        // const newImage = document.createElement('img')
+        // const newRating = document.createElement('span')
+        // const newComment = document.createElement('p')
 
         
-        newName.textContent = e.target[0].value
-        newRest.textContent = e.target[1].value
-        newImage.src = e.target[2].value
-        newRating.textContent = e.target[3].value
-        newComment.textContent = e.target[4].value
+        const newName = e.target[0].value
+        const newRest = e.target[1].value
+        const newImage = e.target[2].value
+        const newRating = e.target[3].value
+        const newComment = e.target[4].value
         
         const newRamen = {
             name: newName,
